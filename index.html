@@ -15,45 +15,50 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
     
     .container {
-      max-width: 100%;
       width: 100%;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
       box-sizing: border-box;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
     
     .imagem-container {
-      width: 100%;
-      margin: 0 auto;
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 20px;
+      max-height: 65vh; /* Limita a altura da imagem */
       overflow: hidden;
     }
     
     .imagem-container img {
       max-width: 100%;
+      max-height: 100%;
+      width: auto;
       height: auto;
       object-fit: contain;
-      display: block;
+      border-radius: 10px;
     }
     
     .whatsapp-btn {
       display: inline-block;
       background-color: #25D366;
       color: white;
-      font-size: 32px; /* Aumentei o tamanho */
+      font-size: 32px;
       font-weight: bold;
-      padding: 20px 60px; /* Aumentei o tamanho */
-      margin: 40px 0 25px 0; /* Aumentei a margem */
+      padding: 20px 60px;
+      margin: 20px 0;
       text-decoration: none;
       border-radius: 50px;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 25px rgba(37, 211, 102, 0.6); /* Efeito mais forte */
+      box-shadow: 0 5px 25px rgba(37, 211, 102, 0.6);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -66,21 +71,37 @@
     
     .aviso {
       color: #ff4444;
-      font-size: 24px; /* Aumentei o tamanho */
-      margin: 25px auto 40px auto;
+      font-size: 24px;
+      margin: 10px auto;
       max-width: 90%;
       font-weight: bold;
-      text-shadow: 0 0 8px rgba(255, 0, 0, 0.5); /* Efeito mais forte */
+      text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
       padding: 0 20px;
     }
     
     @media (max-width: 768px) {
+      .imagem-container {
+        max-height: 55vh;
+      }
       .whatsapp-btn {
-        font-size: 28px;
-        padding: 18px 50px;
+        font-size: 26px;
+        padding: 16px 40px;
       }
       .aviso {
         font-size: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .imagem-container {
+        max-height: 50vh;
+      }
+      .whatsapp-btn {
+        font-size: 22px;
+        padding: 14px 30px;
+      }
+      .aviso {
+        font-size: 18px;
       }
     }
   </style>
